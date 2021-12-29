@@ -71,15 +71,16 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
+
 function quatro ( a , b , c) {
-if (a !=== undefined && b === undefined && c === undefined ){
+if (a !== undefined && b === undefined && c === undefined ){
 return a 
-} else if (c === undefined ){
+} else if (a !== undefined && b !== undefined && c === undefined ){
 return a + b 
-} else if ( a === undefined && b === undefined && c === undefined ){
-return ' False '
-} else if (){
+} else if ( a !== undefined && b !== undefined && c !== undefined ){
 return a + b / c
+} else if (a === undefined && b === undefined && c === undefined){
+return false
 } else { return 'null'
 }}
 
