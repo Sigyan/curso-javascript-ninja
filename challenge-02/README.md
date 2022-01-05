@@ -74,16 +74,21 @@ Crie uma função com as seguintes características:
 
 function quatro ( a , b , c) {
 if (a !== undefined && b === undefined && c === undefined ){
-return a 
+return a ;
 } else if (a !== undefined && b !== undefined && c === undefined ){
-return a + b 
+return a + b; 
 } else if ( a !== undefined && b !== undefined && c !== undefined ){
-return a + b / c
+return (a + b) / c;
 } else if (a === undefined && b === undefined && c === undefined){
-return false
+return false;
 } else { return 'null'
 }}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+quatro () //false
+quatro (1) // 1
+quatro (1 ,2 ) // 3
+quatro (1 ,2 ,3) // 1
+quatro (null) // null
+
 ```
