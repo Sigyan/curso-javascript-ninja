@@ -284,3 +284,87 @@ pessoa.apresentacao = function() {
 }
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var pessoa = {
+  nome: 'Joao',
+  sobrenome: 'silva',
+  sexo: 'Masculino',
+  idade: 20,
+  altura: 1.80,
+  peso: 90,
+  andando: false,
+  caminhouQuantosMetros: 0
+};
+
+pessoa.fazerAniversario = function() {
+  pessoa.idade++;
+}
+
+pessoa.andar = function(a) {
+  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + a;
+  pessoa.andando = true;
+};
+
+pessoa.parar = function() {
+  pessoa.andando = false
+};
+
+pessoa.nomeCompleto = function() {
+  return 'Ola! ' + pessoa.nome + ' ' + pessoa.sobrenome + '!'
+};
+
+pessoa.mostrarIdade = function() {
+  return 'Olá, eu tenho ' + pessoa.idade + ' ' + 'anos !'
+};
+
+pessoa.mostrarPeso = function() {
+  return 'Eu peso ' + pessoa.peso + 'KG'
+}
+
+pessoa.mostrarAltura = function() {
+  return 'Minha altura é ' + pessoa.altura + 'm'
+}
+
+var ola;
+var idadee;
+var metragem;
+
+function itsme() {
+  if (pessoa.sexo !== 'Masculino') {
+   return ' eu sou a' + pessoa.nomeCompleto ()
+  } else {
+    return' eu sou o' + pessoa.nomeCompleto ()
+  }
+}
+
+function itsme1() {
+  if (pessoa.idade === 1) {
+    return  'tenho ' + pessoa.idade + ' ano'
+  } else {
+   return  'tenho ' + pessoa.idade + ' anos'
+  }
+}
+
+function itsme2() {
+  if (pessoa.caminhouQuantosMetros === 1) {
+   return  'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + ' metro!'
+  } else {
+    return  'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + 'metros!'
+  }
+}
+pessoa.apresentacao = function() {
+  return itsme() + itsme1() + itsme2()
+}
