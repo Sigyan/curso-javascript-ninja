@@ -60,13 +60,13 @@ pessoa.parar = function (){pessoa.andando = falso};
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-function nomeCompleto = (pessoa.nome , pessoa.sobrenome) { return "Ola! Meu Nome é pessoa.nome + ' ' + pessoa.sobrenome + '!'};
+pessoa.nomeCompleto = function (){ return 'Ola! Meu Nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + '!'};
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-?
+pessoa.mostrarIdade = function () { return 'Olá, eu tenho ' + pessoa.idade + ' ' + 'anos !'};
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
