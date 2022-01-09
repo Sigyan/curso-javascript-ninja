@@ -171,12 +171,23 @@ correta, de acordo com os dados inseridos no objeto.
 
 pessoa.apresentacao = function () {return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' anos, ' + pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'}   // funcao raiz
 
-//*
-pessoa.apresentacao = function () {if  (pessoa.sexo !== 'Masculino') {return  'Olá, eu sou a' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' anos, ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'}
-else if  (pessoa.idade === 1) {return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'
-} else if (pessoa.caminhouQuantosMetros === 1){return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'
-} else {return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'}}
-*//
+/*
+pessoa.apresentacao = function () {
+if (pessoa.sexo !== 'Masculino') 
+{
+return  'Olá, eu sou a' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' anos, ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'
+}
+else if  (pessoa.idade === 1) {
+return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'
+}
+ else if (pessoa.caminhouQuantosMetros === 1){
+return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'
+} 
+else {
+return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'
+}
+}
+*/
 // Agora, apresente-se ;)
 
 pessoa.apresentacao ()
