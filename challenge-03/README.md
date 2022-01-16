@@ -169,182 +169,10 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 
-pessoa.apresentacao = function () {return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' anos, ' + pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'}   // funcao raiz
-
-/*
-pessoa.apresentacao = function () {
-if (pessoa.sexo !== 'Masculino') 
-{
-return  'Olá, eu sou a' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' anos, ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'
-}
-else if  (pessoa.idade === 1) {
-return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metros!'
-}
- else if (pessoa.caminhouQuantosMetros === 1){
-return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'
-} 
-else {
-return  'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade  + ' ano , ' +  pessoa.altura +' , meu peso é ' + pessoa.peso +' e, só hoje, eu já caminhei '+pessoa.caminhouQuantosMetros +'  metro!'
-}
-}
-*/
-// Agora, apresente-se ;)
-
-pessoa.apresentacao ()
-
-```
-
-
-
-
-
-var pessoa = {
-  nome: 'Joao',
-  sobrenome: 'silva',
-  sexo: 'Masculino',
-  idade: 20,
-  altura: 1.80,
-  peso: 90,
-  andando: false,
-  caminhouQuantosMetros: 0
-};
-
-pessoa.fazerAniversario = function() {
-  pessoa.idade++;
-}
-
-pessoa.andar = function(a) {
-  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + a;
-  pessoa.andando = true;
-};
-
-pessoa.parar = function() {
-  pessoa.andando = false
-};
-
-pessoa.nomeCompleto = function() {
-  return 'Ola! Meu Nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + '!'
-};
-
-pessoa.mostrarIdade = function() {
-  return 'Olá, eu tenho ' + pessoa.idade + ' ' + 'anos !'
-};
-
-pessoa.mostrarPeso = function() {
-  return 'Eu peso ' + pessoa.peso + 'KG'
-}
-
-pessoa.mostrarAltura = function() {
-  return 'Minha altura é ' + pessoa.altura + 'm'
-}
-
-var ola;
-var idadee;
-var metragem;
 
 function itsme() {
   if (pessoa.sexo !== 'Masculino') {
-    ola = 'Olá, eu sou a' + pessoa.nomeCompleto
-  } else {
-    ola = 'Olá, eu sou o' + pessoa.nomeCompleto
-  }
-}
-
-function itsme1() {
-  if (pessoa.idade === 1) {
-    idadee = 'tenho ' + idade.pessoa + ' ano'
-  } else {
-    idadee = 'tenho ' + idade.pessoa + ' anos'
-  }
-}
-
-function itsme2() {
-  if (pessoa.caminhouQuantosMetros === 1) {
-    metragem = 'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + ' metro!'
-  } else {
-    metragem = 'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + 'metros!'
-  }
-}
-pessoa.apresentacao = function() {
-  return itsme() + itsme1() + itsme()
-}
-/* pessoa.apresentacao = function() {
-  if (pessoa.sexo !== 'Masculino') {
-    ola = 'Olá, eu sou a' + pessoa.nomeCompleto
-  } else {
-    ola = 'Olá, eu sou o' + pessoa.nomeCompleto
-  }
- else if (pessoa.idade === 1) {
-  return ' , tenho' + pessoa.idade + ' ano , '
-} else if (pessoa.caminhouQuantosMetros === 1) {
-  ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + '  metro!'
-} else {
-  return 'Olá, eu sou o' + pessoa.nomeCompleto + ' , tenho' + pessoa.idade + ' ano , ' + pessoa.altura + ' , meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + '  metro!'
-}
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var pessoa = {
-  nome: 'Joao',
-  sobrenome: 'silva',
-  sexo: 'Masculino',
-  idade: 20,
-  altura: 1.80,
-  peso: 90,
-  andando: false,
-  caminhouQuantosMetros: 0
-};
-
-pessoa.fazerAniversario = function() {
-  pessoa.idade++;
-}
-
-pessoa.andar = function(a) {
-  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + a;
-  pessoa.andando = true;
-};
-
-pessoa.parar = function() {
-  pessoa.andando = false
-};
-
-pessoa.nomeCompleto = function() {
-  return 'Ola! ' + pessoa.nome + ' ' + pessoa.sobrenome + '!'
-};
-
-pessoa.mostrarIdade = function() {
-  return 'Olá, eu tenho ' + pessoa.idade + ' ' + 'anos !'
-};
-
-pessoa.mostrarPeso = function() {
-  return 'Eu peso ' + pessoa.peso + 'KG'
-}
-
-pessoa.mostrarAltura = function() {
-  return 'Minha altura é ' + pessoa.altura + 'm'
-}
-
-var ola;
-var idadee;
-var metragem;
-
-function itsme() {
-  if (pessoa.sexo !== 'Masculino') {
-   return ' eu sou a' + pessoa.nomeCompleto ()
+   return ' ' + pessoa.nomeCompleto ()
   } else {
     return' eu sou o' + pessoa.nomeCompleto ()
   }
@@ -352,7 +180,7 @@ function itsme() {
 
 function itsme1() {
   if (pessoa.idade === 1) {
-    return  'tenho ' + pessoa.idade + ' ano'
+    return  'tenho ' + pessoa.idade + ' ano '
   } else {
    return  'tenho ' + pessoa.idade + ' anos'
   }
@@ -362,9 +190,16 @@ function itsme2() {
   if (pessoa.caminhouQuantosMetros === 1) {
    return  'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + ' metro!'
   } else {
-    return  'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + 'metros!'
+    return  'e só hoje , eu ja caminhei ' + pessoa.caminhouQuantosMetros + '  metros!'
   }
 }
 pessoa.apresentacao = function() {
   return itsme() + itsme1() + itsme2()
 }
+
+// Agora, apresente-se ;)
+
+pessoa.apresentacao ()
+
+```
+
