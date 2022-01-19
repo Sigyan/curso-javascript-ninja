@@ -7,36 +7,49 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
+var isTruthy = function(a) {
+  if ((a) == true) {
+    return true
+  } else {
+    return false;
+  }
+}
+
+/* nao peguei o sentido do ternario do if
+var isTruthy = function(a) ((a) == true) ?     return true   :     return false  ;
+
 
 function isTruthy (a) {
-return true ? true: false; 
+ (a) = true ? true : false; 
 }
+*/ 
+
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 
-IsTruthy (0);
-IsTruthy (-0);
-IsTruthy (false);
-IsTruthy ('');
-IsTruthy ("");
-IsTruthy (NaN);
-IsTruthy (null);
-IsTruthy (undefined);
+IsTruthy (0); // false
+IsTruthy (-0); // false
+IsTruthy (false); // false
+IsTruthy (''); // false
+IsTruthy (""); // false
+IsTruthy (NaN); // false
+IsTruthy (null); // false
+IsTruthy (undefined); // false
 
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-IsTruthy (1);
-IsTruthy (2);
-IsTruthy (3);
-IsTruthy (4);
-IsTruthy (5);
-IsTruthy ('aaa');
-IsTruthy ('0');
-IsTruthy (true);
-IsTruthy ('fuck');
-IsTruthy ('biba');
+IsTruthy (1); // true
+IsTruthy (2); // false
+IsTruthy (3); // false
+IsTruthy (4); // false
+IsTruthy (5); // false
+IsTruthy ('aaa'); // false
+IsTruthy ('0'); // false
+IsTruthy (true); // true
+IsTruthy ('fuck'); // false
+IsTruthy ('biba'); // false
 
 
 
@@ -53,44 +66,44 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 
-var carro (){
+var carro ={
 marca: 'VolksWagen',
 modelo: 'gol' ,
-placa: 'abc1234'
+placa: 'abc1234',
 ano: 2000,
 cor: 'amarelo',
 quantasPortas: 2,
 assentos: 5,
-quantidadePessoas: 5;
+quantidadePessoas: 5
 }
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor (a) {
-carro.cor (a);
-return carro.cor;
+carro.mudarCor = function (a) {
+carro.cor = (a);
 }
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor () {
+carro.obterCor  = function () {
 return carro.cor 
 }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-carro.obterModelo (){
-return.modelo 
+
+carro.obterModelo = function (){
+return carro.modelo 
 }
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca () {
+carro.obterMarca = function () {
 return carro.marca
 }
 
@@ -99,8 +112,13 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
- carro.obterMacaModelo () {
- return 'Esse carro é um ' +carro.marca + carro.modelo ;
+ carro.obterMacaModelo = function  () {
+ return 'Esse carro é um ' +carro.marca +' '+ carro.modelo ;
+ }
+ ou
+ 
+ carro.obterMacaModelo = function  () {
+ return 'Esse carro é um ' +carro.obterMarca() +' '+ carro.obterModelo() ;
  }
 
 /*
@@ -119,7 +137,11 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+carro.adicionarPessoas = function (pessoasQueEntrarao) {return 'Ja temos ' + () + ' pessoas no carro!' 
+if(carro.quantidadePessoas =>5){return 'O carro ja esta lotado!'}
+if else (){return 'Só cabem mais   ' + () + 'pessoas!'}
+if else (){ return ' Só cabe mais ' +() + ' pessoa!'}
+};
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
