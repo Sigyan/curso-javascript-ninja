@@ -144,6 +144,22 @@ if else (){ return ' Só cabe mais ' +() + ' pessoa!'}
 };
 
 /*
+carro.adicionarPessoas = function(pessoasQueEntrarao) {
+  carro.quantidadePessoas += pessoasQueEntrarao
+}
+return 'Ja temos ' + (carro.quantidadePessoas) + ' pessoas no carro!'
+if (carro.quantidadePessoas == > 5) {
+  return 'O carro ja esta lotado!'
+} else if (carro.quantidadePessoas = < 5) {
+  return 'Só cabem mais   ' + (5 - carro.quantidadePessoas) + 'pessoas!'
+} else if (carro.quantidadePessoas == 4) {
+  return ' Só cabe mais 1 pessoa!'
+}
+}
+*/
+
+
+/*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
 adicionando comentários _inline_ ao lado com o valor retornado, se o método
