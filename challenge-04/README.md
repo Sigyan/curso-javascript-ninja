@@ -138,34 +138,69 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 carro.passageiros = 0
+
+
 // se ja estiver cheio , retornar msg de cheio
 // se nao estiver cheio mas for ultrapassar , msg com qnts pessoas ainda cabem 
 // respeitar singular e plural
 //adicionar pessoas no carro
 //retornar quantas pessoas no carro
+
 carro.adicionarPessoas = function(passageiros) {
-  if (carro.passageiros >= carro.quantidadePessoas) {return 'O carro ja esta cheio!'}
-  if (carro.passageiros + passageiros <= 0 ) { return " O cara esta a ver fantasma ja doido "}
+  if (passageiros < 0) {
+    return 'Ae nao , use carro.removerPessoas'
+  }
+  if (carro.passageiros >= carro.quantidadePessoas) {
+    return 'O carro ja esta cheio!'
+  }
+  if (carro.passageiros + passageiros <= 0) {
+    return " O cara esta a ver fantasma ja doido "
+  }
   if (carro.passageiros + passageiros > carro.quantidadePessoas) {
     var qntVagasSobrando = carro.quantidadePessoas - carro.passageiros
     var textoPessoa = " pessoa "
     var textoCaber = " cabe "
-    if (qntVagasSobrando > 1) 
-     {textoPessoa = ' pessoas '
-       textoCaber = ' cabem '}
+    if (qntVagasSobrando > 1) {
+      textoPessoa = ' pessoas '
+      textoCaber = ' cabem '
+    }
     // no caso passageiros é so a variavel que informei ? 
     // qntVagasSobrando e uma var so da função ?
     // textopessoa tb e so uma var da função ?
     // apos executar o codigo ambos ficam undefined ou nao tem nem criaçao?
-    return "Só "+ textoCaber + qntVagasSobrando + ' ' + textoPessoa + " no carro!"
+    return "Só " + textoCaber + qntVagasSobrando + ' ' + textoPessoa + " no carro!"
     //ate aqui ele analisou a function carro.adicionarPessoas para somente se possivel adicionar fazer?
-       
-    } else {
+
+  } else {
     carro.passageiros += passageiros
-      return 'ja temos ' + carro.passageiros + ' no carro!'}
+    return 'ja temos ' + carro.passageiros + ' no carro!'
+  }
+}
+
+carro.removerPessoas = function(passageiros) {
+  if (passageiros > 0) {
+    return 'Ae nao , use carro.adicionarPessoas'
+  }
+  if (carro.passageiros + passageiros < 0) {
+    return " O cara esta a ver fantasma ja doido "
+  }
+  if (carro.passageiros + passageiros > 0) {
+    var qntVagasSobrando = carro.quantidadePessoas - carro.passageiros
+    var textoPessoa = " pessoa "
+    var textoCaber = " cabe "
+    if (qntVagasSobrando > 1) {
+      textoPessoa = ' pessoas '
+      textoCaber = ' cabem '
+    }
+    return "Só " + textoCaber + qntVagasSobrando + ' ' + textoPessoa + " no carro!"
+    //ate aqui ele analisou a function carro.adicionarPessoas para somente se possivel adicionar fazer?
+
+  } else {
+    carro.passageiros += passageiros
+    return 'ja temos ' + carro.passageiros + ' no carro!'
   }
 
-
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
