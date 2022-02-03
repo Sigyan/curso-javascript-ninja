@@ -137,26 +137,28 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function (pessoasQueEntrarao) {return 'Ja temos ' + () + ' pessoas no carro!' 
-if(carro.quantidadePessoas =>5){return 'O carro ja esta lotado!'}
-if else (){return 'Só cabem mais   ' + () + 'pessoas!'}
-if else (){ return ' Só cabe mais ' +() + ' pessoa!'}
-};
+carro.adicionarPessoas = function(passageiros) {
+  if (carro.passageiros >= carro.quantidadePessoas) {return 'O carro ja esta cheio!'}
+  if (carro.passageiros + passageiros <= 0 ) { return " O cara esta a ver fantasma ja doido "}
+  if (carro.passageiros + passageiros > carro.quantidadePessoas) {
+    var qntVagasSobrando = carro.quantidadePessoas - carro.passageiros
+    var textoPessoa = " pessoa "
+    var textoCaber = " cabe "
+    if (qntVagasSobrando > 1) 
+     {textoPessoa = ' pessoas ';
+       textoCaber = ' cabem '}
+    // no caso passageiros é so a variavel que informei ? 
+    // qntVagasSobrando e uma var so da função ?
+    // textopessoa tb e so uma var da função ?
+    // apos executar o codigo ambos ficam undefined ou nao tem nem criaçao?
+    return "Só "+ textoCaber + qntVagasSobrando + ' ' + textoPessoa + " no carro!"
+    //ate aqui ele analisou a function carro.adicionarPessoas para somente se possivel adicionar fazer?
+       
+    } else {
+    carro.passageiros += passageiros
+      return 'ja temos ' + carro.passageiros + ' no carro!'}
+  }
 
-/*
-carro.adicionarPessoas = function(pessoasQueEntrarao) {
-  carro.quantidadePessoas += pessoasQueEntrarao
-}
-return 'Ja temos ' + (carro.quantidadePessoas) + ' pessoas no carro!'
-if (carro.quantidadePessoas == > 5) {
-  return 'O carro ja esta lotado!'
-} else if (carro.quantidadePessoas = < 5) {
-  return 'Só cabem mais   ' + (5 - carro.quantidadePessoas) + 'pessoas!'
-} else if (carro.quantidadePessoas == 4) {
-  return ' Só cabe mais 1 pessoa!'
-}
-}
-*/
 
 
 /*
