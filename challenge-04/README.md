@@ -137,6 +137,12 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
+carro.passageiros = 0
+// se ja estiver cheio , retornar msg de cheio
+// se nao estiver cheio mas for ultrapassar , msg com qnts pessoas ainda cabem 
+// respeitar singular e plural
+//adicionar pessoas no carro
+//retornar quantas pessoas no carro
 carro.adicionarPessoas = function(passageiros) {
   if (carro.passageiros >= carro.quantidadePessoas) {return 'O carro ja esta cheio!'}
   if (carro.passageiros + passageiros <= 0 ) { return " O cara esta a ver fantasma ja doido "}
@@ -145,7 +151,7 @@ carro.adicionarPessoas = function(passageiros) {
     var textoPessoa = " pessoa "
     var textoCaber = " cabe "
     if (qntVagasSobrando > 1) 
-     {textoPessoa = ' pessoas ';
+     {textoPessoa = ' pessoas '
        textoCaber = ' cabem '}
     // no caso passageiros é so a variavel que informei ? 
     // qntVagasSobrando e uma var so da função ?
@@ -169,31 +175,33 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor () //'amarelo'
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor ('vermelho') // undefined
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor () // 'vermelho'
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor ( ' Verde Musgo' ) // undefined
+
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor () // ' Verde Musgo'
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMacaModelo () //'Esse carro é um VolksWagen gol'
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas (2) //'ja temos 3 no carro!
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas (4) //'Só  cabem 2  pessoas  no carro!'
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas (2)//'ja temos 5 no carro!'
+carro.adicionarPessoas (2) //'O carro ja esta cheio!'
 
 // Tire 4 pessoas do carro.
 ?
