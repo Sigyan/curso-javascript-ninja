@@ -149,6 +149,7 @@ carro.passageiros = 0
 carro.adicionarPessoas = function(passageiros) {
   if (passageiros < 0) {
     return 'Ae nao , use carro.removerPessoas'
+
   }
   if (carro.passageiros >= carro.quantidadePessoas) {
     return 'O carro ja esta cheio!'
@@ -178,29 +179,43 @@ carro.adicionarPessoas = function(passageiros) {
 }
 
 carro.removerPessoas = function(passageiros) {
+  // tem q ser numeror negativo 
   if (passageiros > 0) {
     return 'Ae nao , use carro.adicionarPessoas'
   }
-  if (carro.passageiros + passageiros < 0) {
-    return " O cara esta a ver fantasma ja doido "
+  //se tiver 0 = vazio
+  if (carro.passageiros <= 0) {
+    return 'O carro ja esta vazio 1!'
   }
-  if (carro.passageiros + passageiros > 0) {
-    var qntVagasSobrando = carro.quantidadePessoas - carro.passageiros
+  //se for ultrapassar 0 = falar qnts q pode tirar
+  if (carro.passageiros + passageiros == 0) {
+    carro.passageiros += passageiros
+    return "O carro esta vazio 2!"
+  }
+  if (carro.passageiros + passageiros < 0) {
+
+    var qntPessoasSobrando = carro.passageiros + passageiros
     var textoPessoa = " pessoa "
-    var textoCaber = " cabe "
-    if (qntVagasSobrando > 1) {
-      textoPessoa = ' pessoas '
-      textoCaber = ' cabem '
+    var textoCaber = " resta "
+    if (qntPessoasSobrando < 0) {
+      return "So tem " + carro.passageiros + "pessoas no carro!"
     }
-    return "Só " + textoCaber + qntVagasSobrando + ' ' + textoPessoa + " no carro!"
-    //ate aqui ele analisou a function carro.adicionarPessoas para somente se possivel adicionar fazer?
+    if (qntPessoasSobrando > 1) {
+      textoPessoa = ' pessoas '
+      textoCaber = ' restam '
+    }
+    //executar
+    //if ( carro.passageiros + passageiros <= 0 )
+    return "Ainda " + textoCaber + qntPessoasSobrando + ' ' + textoPessoa + " no carro! 3"
+    //ate aqui ele analisou a function carro.removerPessoas para somente se possivel adicionar fazer
 
   } else {
     carro.passageiros += passageiros
-    return 'ja temos ' + carro.passageiros + ' no carro!'
+    return ' Restaram   ' + carro.passageiros + ' no carro! 4'
   }
 
 }
+
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -229,21 +244,23 @@ carro.obterCor () // ' Verde Musgo'
 carro.obterMacaModelo () //'Esse carro é um VolksWagen gol'
 
 // Adicione 2 pessoas no carro.
-carro.adicionarPessoas (2) //'ja temos 3 no carro!
+carro.adicionarPessoas (2) //'ja temos 2 no carro!
 
 // Adicione mais 4 pessoas no carro.
-carro.adicionarPessoas (4) //'Só  cabem 2  pessoas  no carro!'
+carro.adicionarPessoas (4) //'Só  cabem 3  pessoas  no carro!'
 
 // Faça o carro encher.
-carro.adicionarPessoas (2)//'ja temos 5 no carro!'
-carro.adicionarPessoas (2) //'O carro ja esta cheio!'
+carro.adicionarPessoas (3) // 'ja temos 5 no carro!'
 
 // Tire 4 pessoas do carro.
-?
+carro.removerPessoas (-4) //' Restaram   1 no carro! 4'
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas (10) //'Só  cabem 4  pessoas  no carro!'
 
 // Quantas pessoas temos no carro?
-?
+carro.passageiros //1
+//Codigo rodando com travas 0-5 pra adicionar e remover.thnx noob XD
+
 ```
+
